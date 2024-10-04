@@ -3,10 +3,10 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="Evaluation of Trustworthiness in Medical Vision Language Models">
-  <meta name="keywords" content="Trustworthiness in medical vision language models">
+  <meta name="description" content="Evaluation of Interleaved Large Vision Language Models">
+  <meta name="keywords" content="Interleaved Comprehension">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CARES</title>
+  <title>MMIE</title>
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
@@ -117,78 +117,42 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title"><img id="painting_icon" width="5%" src="images/logo.png"> CARES</h1>
-            <h3 class="title is-3 publication-title">A Comprehensive Benchmark of Trustworthiness in Medical Vision Language Models</h3>
-            <h5 class="subtitle is-5 publication-awards">NeurIPS 2024</h5>
+            <h1 class="title is-1 publication-title" style="color:brown"><img id="painting_icon" width="5%" src="images/logo.png"> MMIE</h1>
+            <h3 class="title is-3 publication-title">Massive Multimodal Interleaved Comprehension Benchmark For Large Vision-Language Models</h3>
+            <!-- <h5 class="subtitle is-5 publication-awards">NeurIPS 2024</h5> -->
             <div class="is-size-5 publication-authors">
               <span class="author-block">
-                <a href="https://richard-peng-xia.github.io/" style="color:#f68946;font-weight:normal;">Peng Xia</a>,
+                <a href="https://richard-peng-xia.github.io/" style="color:#f68946;font-weight:normal;">Peng Xia<sup>*</sup></a>,
               </span>
               <span class="author-block">
-                <a href="" style="color:#008AD7;font-weight:normal;">Ze Chen</a>,
+                <a href="" style="color:#008AD7;font-weight:normal;">Siwei Han<sup>*</sup></a>,
               </span>
               <span class="author-block">
-                <a href="" style="color:#F2A900;font-weight:normal;">Juanxi Tian<sup>*</sup></a>,
-              </span>
-              <span class="author-block">
-                <a href="" style="color:#f68946;font-weight:normal;">Yangrui Gong<sup>*</sup></a>,
-              </span>
-              <span class="author-block">
-                <a href="" style="color:#f68946;font-weight:normal;">Ruibo Hou</a>,
-              </span>
-              <span class="author-block">
-                <a href="" style="color:#f68946;font-weight:normal;">Yue Xu</a>,
-              </span>
-              <span class="author-block">
-                <a href="https://zzachw.github.io/" style="color:#f68946;font-weight:normal;">Zhenbang Wu</a>,
-              </span>
-              <span class="author-block">
-                <a href="" style="color:#f68946;font-weight:normal;">Zhiyuan Fan</a>,
+                <a href="" style="color:#F2A900;font-weight:normal;">Shi Qiu<sup>*</sup></a>,
               </span>
               <span class="author-block">
                 <a href="https://yiyangzhou.github.io/" style="color:#f68946;font-weight:normal;">Yiyang Zhou</a>,
               </span>
               <span class="author-block">
-                <a href="" style="color:#f68946;font-weight:normal;">Kangyu Zhu</a>,
+                <a href="" style="color:#f68946;font-weight:normal;">Zhaoyang Wang</a>,
               </span>
               <span class="author-block">
                 <a href="https://shenmishajing.github.io/" style="color:#f68946;font-weight:normal;">Wenhao Zheng</a>,
               </span>
               <span class="author-block">
-                <a href="" style="color:#f68946;font-weight:normal;">Zhaoyang Wang</a>,
+                <a href="https://billchan226.github.io/" style="color:#f68946;font-weight:normal;">Zhaorun Chen</a>,
               </span>
               <span class="author-block">
-                <a href="https://scholar.google.com/citations?user=AGS_dK8AAAAJ&hl=en" style="color:#f68946;font-weight:normal;">Xiao Wang</a>,
+                <a href="https://gzcch.github.io/" style="color:#f68946;font-weight:normal;">Chenhang Cui</a>,
+              </span> <br>
+              <span class="author-block">
+                <a href="https://dingmyu.github.io/" style="color:#f68946;font-weight:normal;">Mingyu Ding</a>,
               </span>
               <span class="author-block">
-                <a href="https://scholar.google.com/citations?user=bWvMtN8AAAAJ&hl=en" style="color:#f68946;font-weight:normal;">Xuchao Zhang</a>,
+                <a href="https://scholar.google.com/citations?user=WR875gYAAAAJ" style="color:#f68946;font-weight:normal;">Linjie Li</a>,
               </span>
               <span class="author-block">
-                <a href="https://scholar.google.com/citations?user=tm5kow8AAAAJ&hl=en" style="color:#f68946;font-weight:normal;">Chetan Bansal</a>,
-              </span>
-              <span class="author-block">
-                <a href="https://scholar.google.com/citations?user=KqtBi6MAAAAJ&hl=en" style="color:#f68946;font-weight:normal;">Marc Niethammer</a>,
-              </span>
-              <span class="author-block">
-                <a href="https://ranger.uta.edu/~huang/" style="color:#f68946;font-weight:normal;">Junzhou Huang</a>,
-              </span>
-              <span class="author-block">
-                <a href="https://scholar.google.com/citations?user=lI8rKkoAAAAJ&hl=en" style="color:#f68946;font-weight:normal;">Hongtu Zhu</a>,
-              </span>
-              <span class="author-block">
-                <a href="https://scholar.google.com/citations?user=WtDQgqQAAAAJ&hl=en" style="color:#f68946;font-weight:normal;">Yun Li</a>,
-              </span>
-              <span class="author-block">
-                <a href="https://scholar.google.com/citations?user=9jmmp5sAAAAJ&hl=en" style="color:#f68946;font-weight:normal;">Jimeng Sun</a>,
-              </span>
-              <span class="author-block">
-                <a href="https://scholar.google.com/citations?user=Q0gUrcIAAAAJ&hl=en" style="color:#f68946;font-weight:normal;">Zongyuan Ge</a>,
-              </span>
-              <span class="author-block">
-                <a href="https://scholar.google.com/citations?user=S6-aJl8AAAAJ&hl=en" style="color:#f68946;font-weight:normal;">Gang Li</a>,
-              </span>
-              <span class="author-block">
-                <a href="https://www.james-zou.com/" style="color:#f68946;font-weight:normal;">James Zou</a>,
+                <a href="https://scholar.google.com/citations?user=cDcWXuIAAAAJ" style="color:#f68946;font-weight:normal;">Lijuan Wang</a>,
               </span>
               <span class="author-block">
                 <a href="https://www.huaxiuyao.io/" style="color:#f68946;font-weight:normal;">Huaxiu Yao</a>
@@ -196,13 +160,9 @@
 
             <div class="is-size-5 publication-authors">
               <span class="author-block"><b style="color:#f68946; font-weight:normal">&#x25B6 </b> UNC-Chapel Hill</b></span>
-              <span class="author-block"><b style="color:#008AD7; font-weight:normal">&#x25B6 </b> University of Illinois Urbana-Champaign</span>
-              <span class="author-block"><b style="color:#F2A900; font-weight:normal">&#x25B6 </b> Brown University</span>
-              <span class="author-block"><b style="color:#34a853; font-weight:normal">&#x25B6 </b> University of Washington</span>
+              <span class="author-block"><b style="color:#008AD7; font-weight:normal">&#x25B6 </b> University of Chicago</span>
               <span class="author-block"><b style="color:#d32f2f; font-weight:normal">&#x25B6 </b> Microsoft Research</span>
-              <span class="author-block"><b style="color:#ea4335; font-weight:normal">&#x25B6 </b> UT Arlington</span>
-              <span class="author-block"><b style="color:#fbbc05; font-weight:normal">&#x25B6 </b> Monash University</span>
-              <span class="author-block"><b style="color:#9c27b0; font-weight:normal">&#x25B6 </b> Stanford University</span>
+              <span class="author-block"><b style="color:#ea4335; font-weight:normal">&#x25B6 </b> NUS</span>
             </div>
 
             <div class="is-size-6 publication-authors">

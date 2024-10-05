@@ -361,41 +361,30 @@
                 color: white;
               }
             
-              table.overveiw-table th,
               table.overveiw-table td {
                 padding: 12px 15px;
-                text-align: center;
+                text-align: left;
                 border: 1px solid #ddd;
               }
             
-              table.overveiw-table tbody tr:nth-child(even) {
-                background-color: #f2f2f2;
+              table.overveiw-table tbody tr:nth-child(-n+5) {
+                background-color: #ffffff;
+              }
+
+              table.overveiw-table tbody tr:nth-child(n+6):nth-child(-n+8) {
+                background-color: #e0dfe769;
+              }
+
+              table.overveiw-table tbody tr:nth-child(n+9) {
+                background-color: #ffffff;
               }
             
               table.overveiw-table tbody tr:hover {
-                background-color: #ddd;
+                background-color: #ddd !important;
               }
-            
-              table.js-sort-table tbody tr:first-child td,
-              table.js-sort-table thead th,
-              table.js-sort-table tbody tr:last-child td {
-                border-top: none;
-                border-bottom: none;
-              }
-            
-              table.overveiw-table td:first-child {
-                text-align: left;
-              }
-            
-              table.overveiw-table tbody tr td[colspan='3'] {
-                background-color: #a7a7b7;
-                color: white;
-                text-align: left;
-                font-weight: bold;
-              }
-            
+
               table.overveiw-table tbody tr td {
-                font-size: 14px;
+                font-size: 16px;
               }
             
               table.overveiw-table tbody tr td b {
@@ -414,7 +403,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><b>questions</b> </td>
+                    <td><b>Questions</b> </td>
                     <td>20103</td>
                     <td>-</td>
                   </tr>

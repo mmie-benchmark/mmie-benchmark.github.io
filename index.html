@@ -117,7 +117,9 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title" style="color:brown"><img id="painting_icon" width="5%" src="images/logo.png"> MMIE</h1>
+            <h1 class="title is-1 publication-title" style="color:brown; font-size: 70px;">
+              <img id="painting_icon" width="15%" src="images/logo.png" style="vertical-align: bottom;"> MMIE
+            </h1>
             <h3 class="title is-3 publication-title">Massive Multimodal Interleaved Comprehension Benchmark For Large Vision-Language Models</h3>
             <!-- <h5 class="subtitle is-5 publication-awards">NeurIPS 2024</h5> -->
             <div class="is-size-5 publication-authors">
@@ -182,7 +184,7 @@
                   </a>
                 </span>
                 <span class="link-block">
-                  <a href="https://github.com/richard-peng-xia/CARES" target="_blank"
+                  <a href="https://github.com/richard-peng-xia/MMIE" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -191,7 +193,7 @@
                   </a>
                 </span>
                 <span class="link-block">
-                  <a href="https://github.com/richard-peng-xia/CARES/tree/main/data" target="_blank"
+                  <a href="https://huggingface.co/datasets/MMIE/MMIE" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fas fa-database"></i>
@@ -200,12 +202,12 @@
                   </a>
                 </span>
                 <span class="link-block">
-                  <a href="https://x.com/HuaxiuYaoML/status/1800373984493547588" target="_blank"
+                  <a href="https://huggingface.co/MMIE/MMIE-Eval" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
-                      <i class="fas fa-share-square"></i>
+                      <i class="fas fa-robot"></i>
                     </span>
-                    <span>Twitter</span>
+                    <span>Eval Model</span>
                   </a>
                 </span>
                 <span class="link-block">
@@ -241,10 +243,10 @@
     <div class="container is-max-desktop">
       <div class="hero-body">
         <h4 class="subtitle has-text-centered">
-          🔥<span style="color: #ff3860">[NEW!]</span> We delve into the trustworthiness of Med-LVLMs across 5 key dimensions: trustfulness, fairness, safety, privacy, & robustness. With 41K Q&A pairs, spanning 16 image modalities & 27 anatomical regions.
-          
+          🔥<span style="color: #ff3860">[NEW!]</span> We introduce MMIE, a large-scale knowledge-intensive benchmark for evaluating interleaved multimodal comprehension and generation in Large Vision-Language Models (LVLMs)
+<!--           
           <br><br>
-          🧐🔍 Findings: Models often show factual inaccuracies & fail to maintain fairness, also proving vulnerable to attacks with a lack of privacy awareness.
+          🧐🔍 Findings: Models often show factual inaccuracies & fail to maintain fairness, also proving vulnerable to attacks with a lack of privacy awareness. -->
         </h4>
       </div>
     </div>
@@ -258,214 +260,16 @@
         <div class="column is-six-fifths">
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
-            <p>
-            Artificial intelligence has significantly impacted medical applications, particularly with the advent of Medical Large Vision Language Models (Med-LVLMs), sparking optimism for the future of automated and personalized healthcare. However, the trustworthiness of Med-LVLMs remains unverified, posing significant risks for future model deployment.
-              <ol type="1">
-                <li><b>Evaluation Dimensions</b>. <span style="font-size: 95%;">We introduce <b>CARES</b> and aim to <b>C</b>omprehensively ev<b>A</b>luate the t<b>R</b>ustworthin<b>ES</b>s of Med-LVLMs across the medical domain. We assess the trustworthiness of Med-LVLMs across five dimensions, including trustfulness, fairness, safety, privacy, and robustness </span></li>
-                <li><b>Data Format and Scale</b>. <span style="font-size: 95%;"> CARES comprises about <b>41K</b> question-answer pairs in both <b>closed and open-ended </b>formats, covering
-                    <b>16 </b>medical image modalities and <b>27</b> anatomical regions. </li>
-                <li><b>Performance</b>. <span style="font-size: 95%;">Our analysis reveals
-                    that the models consistently exhibit concerns regarding trustworthiness, often
-                    displaying factual inaccuracies and failing to maintain fairness across different
-                    demographic groups. Furthermore, they are vulnerable to attacks and demonstrate
-                    a lack of privacy awareness. </li>
-                <li><b>Open-source</b>. <span style="font-size: 95%;">We make GPT-4 generated evaluation data and code base publicly available.</li>
-              </ol>
-           </p>
-  
+            <centering>
+              <p>We present <strong>MMIE</strong>, a <strong>M</strong>assive <strong>M</strong>ultimodal <strong>I</strong>nterleaved understanding <strong>E</strong>valuation benchmark, designed for Large Vision-Language Models (LVLMs). MMIE offers a robust framework for evaluating the interleaved comprehension and generation capabilities of LVLMs across diverse fields, supported by reliable automated metrics.</p>
+              <div style="text-align: center;">
+                <img id="teaser" width="80%" src="images/overview.png">
+              </div>
+            </centering>           
           </div>
         </div>
       </div>
         
-    </div>
-  </section>
-
-
-  <section class="section">
-    <div class="container">
-      
-      <div class="columns is-centered">
-        <div class="column is-full has-text-centered content">
-  
-          <h2 class="title is-3" id="leaderboard">🏆 Leaderboard</h2>
-          <div class="content">
-            <p class="mt-3">Scores on CARES benchmark. Here "ACC": Accuracy, "OC": Over-Confident ratio, "Abs": Abstention rate, "Tox": Toxicity score, "AED": Accuracy Equality Difference. We report "Abs" in Privacy and Overcautiousness.
-              To view detailed results, please see the paper.
-            </p>
-            <!-- <div class="video-duration">
-              <p>
-                <strong>Short Video:</strong> &lt; 2min  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                <strong>Medium Video:</strong> 4min ~ 15min  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                <strong>Long Video:</strong> 30min ~ 60min
-              </p>
-              <p>
-                By default, this leaderboard is sorted by results with subtitles. To view other sorted results, please click on the corresponding cell.
-              </p>
-            </div> -->
-  
-            <table class="js-sort-table" id="results" style="margin-left: auto; margin-right: auto;">
-              <thead>
-                <tr>
-                  <th rowspan="2" style="vertical-align: middle; width: 50px;" ><strong>#</strong></th>
-                  <th rowspan="2" style="vertical-align: middle; width: 180px;"><strong>Model</strong></th>
-                  <th colspan="2" style="vertical-align: middle; width: 300px;" data-js-sort-colNum="5"><strong>Trustfulness (%)</strong></th>
-                  <th colspan="3" style="vertical-align: middle; width: 300px;" data-js-sort-colNum="7"><strong>Fairness (%)</strong></th>
-                  <th colspan="3" style="vertical-align: middle; width: 300px;" data-js-sort-colNum="9"><strong>Safety (%)</strong></th> 
-                  <th colspan="2" style="vertical-align: middle; width: 300px;" data-js-sort-colNum="11"><strong>Privacy (%)</strong></th> 
-                  <th colspan="2" style="vertical-align: middle; width: 300px;" data-js-sort-colNum="11"><strong>Robustness (%)</strong></th>
-                </tr>
-                <tr>
-                  <th data-js-sort-colNum="4"><strong>Factuality <br> ACC↑ </strong></th>
-                  <th data-js-sort-colNum="5"><strong>Uncertainty <br> ACC↑ / OC↓</strong></th>
-                  <th data-js-sort-colNum="6"><strong>Age<br> AED↓</strong></th>
-                  <th data-js-sort-colNum="7"><strong>Gender<br> AED↓</strong></th>
-                  <th data-js-sort-colNum="8"><strong>Race<br> AED↓</strong></th>
-                  <th data-js-sort-colNum="9"><strong>Jailbreaking<br>ACC↑/Abs↑</strong></th>
-                  <th data-js-sort-colNum="10"><strong>Overcaut<br>iousness↓</strong></th>
-                  <th data-js-sort-colNum="11"><strong>Toxicity<br>Tox↓/Abs↑</strong></th>
-                  <th data-js-sort-colNum="12"><strong>Zero-shot↑</strong></th>
-                  <th data-js-sort-colNum="13"><strong>Few-shot↑</strong></th>
-                  <th data-js-sort-colNum="14"><strong>Input<br>ACC↑/Abs↑</strong></th>
-                  <th data-js-sort-colNum="15"><strong>Semantic<br>Abs↑</strong></th>
-                </tr>
-              </thead>
-              <tbody>
-  
-                <tr>
-                  <td style="vertical-align: middle;">1</td>
-                  <td style="text-align: left; padding: 2px 10px;">
-                    <b class="">
-                      <a href="https://github.com/microsoft/LLaVA-Med/tree/v1.0.0" class="ext-link" style="font-size: 16px; margin-left: 5px;">LLaVA-Med</a>
-                      <p style="font-size: 12px; margin-left: 5px; color: #858383;">Microsoft</p>
-                    </b>
-                  </td>
-                  <td style="vertical-align: middle;"><b class="">40.4</b></td>
-                  <td style="vertical-align: middle;">38.4 / 38.3</td>
-                  <td style="vertical-align: middle;">18.3</td>
-                  <td style="vertical-align: middle;">2.7</td>
-                  <td style="vertical-align: middle;">4.7</td>
-                  <td style="vertical-align: middle;"><strong>35.6 / 30.2</strong></td>
-                  <td style="vertical-align: middle;">59.0</td>
-                  <td style="vertical-align: middle;">1.37 / <strong>17.4</strong></td>    
-                  <td style="vertical-align: middle;">2.71</td>        
-                  <td style="vertical-align: middle;">2.04</td>   
-                  <td style="vertical-align: middle;">42.9 / <strong>6.68</strong></td>
-                  <td style="vertical-align: middle;"> / </td>               
-                </tr>
-                <tr>
-                  <td style="vertical-align: middle;">2</td>
-                  <td style="text-align: left; padding: 2px 10px;"><b class=""><a href="https://github.com/snap-stanford/med-flamingo" class="ext-link" style="font-size: 16px; margin-left: 5px;">Med-Flamingo
-                    <p style="font-size: 12px; margin-left: 5px; color: #858383;">Stanford & Hospital Israelita Albert Einstein & Harvard </p>
-                  </a></b></td>
-                  <td style="vertical-align: middle;">29.0</td>
-                  <td style="vertical-align: middle;">33.7 / 59.1</td>
-                  <td style="vertical-align: middle;"><strong>11.8</strong></td>
-                  <td style="vertical-align: middle;">1.6</td>
-                  <td style="vertical-align: middle;">4.8</td>
-                  <td style="vertical-align: middle;">22.5 / 0.00</td>
-                  <td style="vertical-align: middle;"><strong>0.00</strong></td> 
-                  <td style="vertical-align: middle;">1.88 / 0.35</td>  
-                  <td style="vertical-align: middle;">0.76</td>     
-                  <td style="vertical-align: middle;">0.65</td> 
-                  <td style="vertical-align: middle;">37.5 / 0.00</td>   
-                  <td style="vertical-align: middle;">/</td>                          
-                </tr>
-                <tr>
-                  <td style="vertical-align: middle;">3</td>
-                  <td style="text-align: left; padding: 2px 10px;">
-                    <b class="">
-                      <a href="https://github.com/xiaoman-zhang/PMC-VQA" class="ext-link" style="font-size: 16px; margin-left: 5px;">MedVInT</a>
-                      <p style="font-size: 12px; margin-left: 5px; color: #858383;">SJTU & Shanghai AI Lab</p>
-                    </b>
-                  </td>
-                  <td style="vertical-align: middle;">39.3</td>
-                  <td style="vertical-align: middle;">32.9 / 52.9</td>
-                  <td style="vertical-align: middle;">19.7</td>
-                  <td style="vertical-align: middle;"><strong>0.8</strong></td>
-                  <td style="vertical-align: middle;"><strong>2.0</strong></td>
-                  <td style="vertical-align: middle;">34.1 / 0.00</td>
-                  <td style="vertical-align: middle;"><strong>0.00</strong></td>
-                  <td style="vertical-align: middle;">1.53 / 0.04</td>  
-                  <td style="vertical-align: middle;">0.00</td>  
-                  <td style="vertical-align: middle;">0.00</td>  
-                  <td style="vertical-align: middle;"><strong>57.9</strong> / 0.00</td>
-                  <td style="vertical-align: middle;">0.01</td>                                
-              </tr>
-              <tr>
-                <td style="vertical-align: middle;">4</td>
-                <td style="text-align: left; padding: 2px 10px;"><b class=""><a href="https://github.com/chaoyi-wu/RadFM" class="ext-link" style="font-size: 16px; margin-left: 5px;">RadFM
-                  <p style="font-size: 12px; margin-left: 5px; color: #858383;">SJTU & Shanghai AI Lab</p>
-                </a> </b></td>
-                <td style="vertical-align: middle;">27.5</td>
-                <td style="vertical-align: middle;">35.9 / 58.5</td>
-                <td style="vertical-align: middle;">14.0 </td>
-                <td style="vertical-align: middle;">2.7 </td>
-                <td style="vertical-align: middle;">13.8 </td>
-                <td style="vertical-align: middle;">25.4 / 0.65 </td>
-                <td style="vertical-align: middle;">1.00</td>   
-                <td style="vertical-align: middle;"><strong>0.83</strong> / 2.58</td> 
-                <td style="vertical-align: middle;">0.00</td>  
-                <td style="vertical-align: middle;">0.00</td> 
-                <td style="vertical-align: middle;">22.2 / 0.02</td> 
-                <td style="vertical-align: middle;"><strong>0.06</strong></td>                            
-              </tr>
-              <tr>
-                <td style="vertical-align: middle;">5</td>
-                <td style="text-align: left; padding: 2px 10px;"><b class=""><a href="https://llava-vl.github.io/blog/2024-01-30-llava-next/" class="ext-link" style="font-size: 16px; margin-left: 5px;">LLaVA-v1.6
-                  <p style="font-size: 12px; margin-left: 5px; color: #858383;">Microsoft & UW Madison</p>
-                </a> </b></td>
-                <td style="vertical-align: middle;">32.3</td>
-                <td style="vertical-align: middle;">42.5 / 44.7</td>
-                <td style="vertical-align: middle;">19.7 </td>
-                <td style="vertical-align: middle;">1.9 </td>
-                <td style="vertical-align: middle;">6.4 </td>
-                <td style="vertical-align: middle;">29.4 / 1.13 </td>
-                <td style="vertical-align: middle;">3.67 </td>   
-                <td style="vertical-align: middle;">13.0 / 5.18</td>
-                <td style="vertical-align: middle;"><strong>14.0</strong></td>  
-                <td style="vertical-align: middle;"><strong>13.2</strong></td>
-                <td style="vertical-align: middle;">/</td>   
-                <td style="vertical-align: middle;">/</td>                            
-              </tr>
-              <tr>
-                <td style="vertical-align: middle;">6</td>
-                <td style="text-align: left; padding: 2px 10px;"><b class=""><a href="https://github.com/QwenLM/Qwen-VL" class="ext-link" style="font-size: 16px; margin-left: 5px;">Qwen-VL-Chat
-                  <p style="font-size: 12px; margin-left: 5px; color: #858383;">Alibaba </p>
-                </a></b></td>
-                <td style="vertical-align: middle;">33.8</td>
-                <td style="vertical-align: middle;"><strong>50.7 / 17.0</strong></td>
-                <td style="vertical-align: middle;">16.1</td>
-                <td style="vertical-align: middle;">1.0</td>
-                <td style="vertical-align: middle;">3.1</td>
-                <td style="vertical-align: middle;">31.1 / 5.36</td>
-                <td style="vertical-align: middle;">2.67</td>
-                <td style="vertical-align: middle;">1.69 / 7.26</td>      
-                <td style="vertical-align: middle;">10.4</td> 
-                <td style="vertical-align: middle;">9.82</td>
-                <td style="vertical-align: middle;">/</td> 
-                <td style="vertical-align: middle;">/</td>                                   
-              </tr>
-              
-              
-          
-            </tbody>                                                   
-          </table> 
-  
-          <!-- <p style="margin-top: -20px;">
-            <strong style="color: #22a56e; font-size: 18px;" >Green date</strong> indicates the newly added models  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-            - indicates closed-source models
-          </p> -->
-  
-          <!-- <p style=" text-align: left;">
-            1* The short and medium videos are sampled at 1 fps, while the long videos are sampled at 2 fps to ensure the stability of the API.
-            </br>2* The videos less than 384 seconds are sampled at 1 fps, and for those longer than 384 seconds, we extract 384 frames uniformly. All the frames are resized to 512x512 resolution to fit within GPT-4o’s max context length.
-          </p> -->
-  
-          </div>
-
-        </div>
-      </div>
-  
     </div>
   </section>
   
@@ -473,7 +277,7 @@
   <!-- Results. -->
   <div class="columns is-centered has-text-centered">
     <div class="column is-six-fifths">
-      <h2 class="title is-3"><img id="painting_icon" width="3%" src="https://cdn-icons-png.flaticon.com/512/5886/5886212.png"> CARES Datasets</h2>
+      <h2 class="title is-3"><img id="painting_icon" width="3%" src="https://cdn-icons-png.flaticon.com/512/5886/5886212.png"> MMIE Datasets</h2>
     </div>
   </div>
   <!-- </div> -->
@@ -483,10 +287,18 @@
   <div class="columns is-centered">
     <div class="column is-full-width">
       <div class="content has-text-justified">
-        <p>
-        We utilize open-source medical vision-language datasets and image classification datasets to construct CARES benchmark, which cover a wide range of medical image modalities
-        and body parts. The diversity of the datasets ensures richness in question formats and indicates coverage of 16 medical
-        image modalities and 27 human anatomical structures.
+        <p>MMIE is curated from four multimodal datasets, encompassing:</p>
+        <ul>
+          <li><strong>3 categories</strong>: Situational analysis, project-based learning, and multi-step reasoning.</li>
+          <li><strong>12 fields</strong>: Mathematics, physics, coding, statistics, literature, philosophy, education, finance, health, sports, art, and Electrical Engineering and Computer Science (EECS).</li>
+          <li><strong>102 subfields</strong>: Offering in-depth coverage across multiple domains.</li>
+        </ul>
+
+        <p>The dataset contains <strong>20,103 multimodal questions</strong> that support both interleaved inputs and outputs. It includes a mix of multiple-choice and open-ended questions, evaluating a wide range of competencies and reasoning skills. Each query is paired with a <strong>ground truth reference</strong>, enabling effective evaluation.</p>
+
+        <p>In addition, we propose an <strong>automated evaluation metric</strong> powered by a scoring model, which is available for use at 
+        <a href="https://huggingface.co/Lillianwei/MMIE-Eval">MMIE-Eval</a>. This evaluation tool provides a streamlined way to assess your model's performance using the benchmark dataset.</p>
+
 
 <!-- CSS Code: Place this code in the document's head (between the 'head' tags) -->
 <style>
@@ -510,101 +322,85 @@
   table.GeneratedTable thead {
     background-color: #6691ee;
   }
-  </style>
+</style>
   
   <!-- HTML Code: Place this code in the document's body (between the 'body' tags) where the table should appear -->
   <div class="column is-six-fifths" width="80%">
-  <table class="GeneratedTable">
+  <table class="js-sort-table">
     <thead>
       <tr>
-        <th>Data Source</th>
-        <th>Data Modality </th>
-        <th># Images </th>
-        <th># QAs </th>
-        <th>Dataset Type </th>
-        <th> Answer Type </th>
-        <th> Demography </th>
+        <th>Statistic</th>
+        <th>Number</th>
+        <th>Percentage</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><a href="https://physionet.org/content/mimic-cxr-jpg/2.0.0/">MIMIC-CXR</a> </td>
-        <td>Chest X-ray</td>
-        <td>1.9K</td>
-        <td>10.3K</td>
-        <td>VL</td>
-        <td>Open-ended</td>
-        <td>Age, Gender, Race</td>
-      </tr>
-      <tr>
-        <td><a href="https://iuhealth.org/find-medical-services/x-rays">IU-Xray</a> </td>
-        <td>Chest X-ray</td>
-        <td>0.5k</td>
-        <td>2.5K</td>
-        <td>VL</td>
-        <td>Yes/No</td>
+        <td><b>questions</b> </td>
+        <td>20103</td>
         <td>-</td>
       </tr>
       <tr>
-        <td><a href="https://ophai.hms.harvard.edu/datasets/harvard-fairvlmed10k/">Harvard-FairVLMed</a> </td>
-        <td>SLO Fundus</td>
-        <td>0.7K</td>
-        <td>2.8K</td>
-        <td>VL</td>
-        <td>Open-ended</td>
-        <td>Age, Gender, Race</td>
+        <td>- Situational analysis</td>
+        <td>5005</td>
+        <td>24.89%</td>
       </tr>
       <tr>
-        <td><a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/DBW86T">HAM10000</a> </td>
-        <td>Dermatoscopy</td>
-        <td>1K</td>
-        <td>2K</td>
-        <td>Classification</td>
-        <td>Multi-choice</td>
-        <td>Age, Gender</td>
+        <td>- Project-based learning</td>
+        <td>11482</td>
+        <td>57.12%</td>
       </tr>
       <tr>
-        <td><a href="https://stanfordaimi.azurewebsites.net/datasets/3263e34a-252e-460f-8f63-d585a9bfecfc">OL3I</a> </td>
-        <td>Heart CT</td>
-        <td>1K</td>
-        <td>1K</td>
-        <td>Classification</td>
-        <td>Yes/No</td>
-        <td>Age, Gender</td>
+        <td>- Multi-step reasoning</td>
+        <td>3616</td>
+        <td>17.99%</td>
       </tr>
       <tr>
-        <td><a href="https://huggingface.co/datasets/axiong/pmc_oa">PMC-OA</a> </td>
-        <td>Mixture</td>
-        <td>2.5K</td>
-        <td>13K</td>
-        <td>VL</td>
-        <td>Open-ended</td>
+        <td><b>Total Categories/Fields/Subfields</b></td>
+        <td>3/12/102</td>
         <td>-</td>
       </tr>
       <tr>
-        <td><a href="https://github.com/OpenGVLab/Multi-Modality-Arena">OmniMedVQA</a> </td>
-        <td>Mixture</td>
-        <td>11K</td>
-        <td>12K</td>
-        <td>VQA</td>
-        <td>Multi-choice</td>
+        <td colspan="3" ><b>Formats</b></td>
+      </tr>
+      <tr>
+        <td>- Multiple-Choice Questions</td>
+        <td>663</td>
+        <td>3.40%</td>
+      </tr>
+      <tr>
+        <td>- Open-Ended Questions</td>
+        <td>19340</td>
+        <td>96.60%</td>
+      </tr>
+      <tr>
+        <td><b>Questions with Images</b></td>
+        <td>20103</td>
+        <td>100%</td>
+      </tr>
+      <tr>
+        <td><b>Questions with answer label</b></td>
+        <td>20103</td>
+        <td>100%</td>
+      </tr>
+      <tr>
+        <td><b>Average question length</b></td>
+        <td>76.0</td>
         <td>-</td>
       </tr>
-
+      <tr>
+        <td><b>Average images per question</b></td>
+        <td>1.32</td>
+        <td>-</td>
+      </tr>
     </tbody>
-  </table>
+  </table>  
 </div>
   <!-- Codes by Quackit.com -->
   
         </p>
         <p>
-        There are two types of questions in CARES: (1) Closed-ended
-        questions: Two or more candidate options are provided for each question as the prompt, with only one
-        being correct. We calculate the accuracy by matching the option in the model output; (2) Open-ended
-        questions: Open-ended questions do not have a fixed set of possible answers and require more detailed,
-        explanatory or descriptive responses. It is more challenging, as fully open settings encourage a deeper
-        analysis of medical scenarios, enabling a comprehensive assessment of the model’s understanding of
-        medical knowledge. We quantify the accuracy of model responses using GPT-4.
+          We collect and restructure four multimodal datasets to align with the interleaved image-and-text format and categorize them into three categories – situational analysis, project-based learning and multi-step reasoning.
         </p>
       </div>
 
@@ -613,12 +409,9 @@
       <div class="columns is-centered has-text-centered">
       <div class="column is-six-fifths" style="display: flex; align-items: flex-start; justify-content: center;">
         <figure style="text-align: center;">
-          <img id="teaser" width="70%" src="images/data.png">
+          <img id="teaser" width="40%" src="images/data.png">
           <figcaption>
-              Statistical overview of CARES
-              datasets. (left) CARES covers numerous anatomical structures, including the brain, eyes, heart,
-              chest, etc. (right) the involved medical imaging
-              modalities, including major radiological modalities, pathology, etc.
+            Distribution of categories and fields in MMIE.
           </figcaption>
         </figure>
       </div>
@@ -632,7 +425,7 @@
 </section>
  
 
-<section class="section">
+<!-- <section class="section">
   <div class="columns is-centered has-text-centered">
     <div class="column is-six-fifths">
       <h2 class="title is-3"><img id="painting_icon" width="5%" src="images/logo.png"> CARES: A Benchmark of Trustworthiness in Medical Vision Language Models </h2>
@@ -690,18 +483,9 @@
           </ul>
         </p>
       </div>
-      <centering>
-        <div style="text-align: center;">
-          <img id="teaser" width="80%" src="images/overview.png">
-        </div>
-
-      
-      </centering>           
     </div>
-  </div>
-
-
-</section>
+  <!-- </div>
+</section> --> -->
   
 
 
@@ -715,7 +499,7 @@
    
 <div class="container is-max-desktop">
 
-    <ul type="1">
+    <!-- <ul type="1">
       <li><b>Trustfulness</b>. <span style="font-size: 95%;">The evaluation of trustfulness includes assessments of factuality and uncertainty. The
           key findings are: (1) Existing Med-LVLMs encounter significant factuality hallucination, with
           accuracy exceeding 50% on the comprehensive VQA benchmark we constructed, especially when
@@ -746,13 +530,13 @@
         when significant noise is introduced to input images, Med-LVLMs fail to make accurate judgments
         and seldom refuse to respond; (2) when tested on unfamiliar modalities, these models continue to
         respond, despite lacking sufficient medical knowledge. <b>[8]</b> </span></li>
-    </ul>
+    </ul> -->
 
   </div>
 </section>
 
 
-<section class="section">
+<!-- <section class="section">
 
 <div class="container mt-5">
     <div class="form-row" style="justify-content: flex-end;">
@@ -766,10 +550,10 @@
               class="material-icons">keyboard_arrow_right</i></button>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- Question Card -->
-    <div style="display: flex; justify-content: center; align-items: center;">
+    <!-- <div style="display: flex; justify-content: center; align-items: center;">
       <div class="card mb-4" style="width: 60%; display: flex; align-items: center;">
         <div class="card-body" id="selected-question" style="display: flex; height: 50vh;">
           <div class="chat-history">
@@ -781,9 +565,200 @@
 
   </div>
 
+</section> -->
+
+<section class="section">
+  <div class="container">
+    
+    <div class="columns is-centered">
+      <div class="column is-full has-text-centered content">
+
+        <h2 class="title is-3" id="leaderboard">🏆 Leaderboard</h2>
+        <div class="content">
+          <p class="mt-3">Scores on MIME benchmark.
+            To view detailed results, please see the paper. Leaderboard is also available on <a href='https://huggingface.co/spaces/MMIE/Leaderboard'>huggingface</a>
+          </p>
+          <table class="js-sort-table" id="results" style="margin-left: auto; margin-right: auto;">
+            <thead>
+              <tr>
+                <th style="vertical-align: middle; width: 180px;"><strong>Model</strong></th>
+                <th style="vertical-align: middle; width: 180px;"><strong>Model Type</strong></th>
+                <th style="vertical-align: middle; width: 180px;"><strong>Situational analysis</strong></th>
+                <th style="vertical-align: middle; width: 180px;"><strong>Project-based learning</strong></th>
+                <th style="vertical-align: middle; width: 180px;"><strong>Multi-step reasoning</strong></th>
+                <th style="vertical-align: middle; width: 180px;"><strong>AVG</strong></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>MiniGPT-5</td>
+                <td>Interleaved LVLM</td>
+                <td>47.63</td>
+                <td>55.12</td>
+                <td>42.17</td>
+                <td>50.92</td>
+              </tr>
+              <tr>
+                <td>EMU-2</td>
+                <td>Interleaved LVLM</td>
+                <td>39.65</td>
+                <td>46.12</td>
+                <td>50.75</td>
+                <td>45.33</td>
+              </tr>
+              <tr>
+                <td>GILL</td>
+                <td>Interleaved LVLM</td>
+                <td>46.72</td>
+                <td>57.57</td>
+                <td>39.33</td>
+                <td>51.58</td>
+              </tr>
+              <tr>
+                <td>Anole</td>
+                <td>Interleaved LVLM</td>
+                <td>48.95</td>
+                <td>59.05</td>
+                <td>51.72</td>
+                <td>55.22</td>
+              </tr>
+              <tr>
+                <td>GPT-4o | Openjourney</td>
+                <td>Integrated LVLM</td>
+                <td>53.05</td>
+                <td>71.4</td>
+                <td>53.67</td>
+                <td>63.65</td>
+              </tr>
+              <tr>
+                <td>GPT-4o | SD-3</td>
+                <td>Integrated LVLM</td>
+                <td>53</td>
+                <td>71.2</td>
+                <td>53.67</td>
+                <td>63.52</td>
+              </tr>
+              <tr>
+                <td>GPT-4o | SD-XL</td>
+                <td>Integrated LVLM</td>
+                <td>56.12</td>
+                <td>73.25</td>
+                <td>53.67</td>
+                <td>65.47</td>
+              </tr>
+              <tr>
+                <td>GPT-4o | Flux</td>
+                <td>Integrated LVLM</td>
+                <td>54.97</td>
+                <td>68.8</td>
+                <td>53.67</td>
+                <td>62.63</td>
+              </tr>
+              <tr>
+                <td>Gemini-1.5 | Openjourney</td>
+                <td>Integrated LVLM</td>
+                <td>48.08</td>
+                <td>67.93</td>
+                <td>60.05</td>
+                <td>61.57</td>
+              </tr>
+              <tr>
+                <td>Gemini-1.5 | SD-3</td>
+                <td>Integrated LVLM</td>
+                <td>47.48</td>
+                <td>68.7</td>
+                <td>60.05</td>
+                <td>61.87</td>
+              </tr>
+              <tr>
+                <td>Gemini-1.5 | SD-XL</td>
+                <td>Integrated LVLM</td>
+                <td>49.43</td>
+                <td>71.85</td>
+                <td>60.05</td>
+                <td>64.15</td>
+              </tr>
+              <tr>
+                <td>Gemini-1.5 | Flux</td>
+                <td>Integrated LVLM</td>
+                <td>47.07</td>
+                <td>68.33</td>
+                <td>60.05</td>
+                <td>61.55</td>
+              </tr>
+              <tr>
+                <td>LLAVA-34b | Openjourney</td>
+                <td>Integrated LVLM</td>
+                <td>54.12</td>
+                <td>73.47</td>
+                <td>47.28</td>
+                <td>63.93</td>
+              </tr>
+              <tr>
+                <td>LLAVA-34b | SD-3</td>
+                <td>Integrated LVLM</td>
+                <td>54.72</td>
+                <td>72.55</td>
+                <td>47.28</td>
+                <td>63.57</td>
+              </tr>
+              <tr>
+                <td>LLAVA-34b | SD-XL</td>
+                <td>Integrated LVLM</td>
+                <td>55.97</td>
+                <td>74.6</td>
+                <td>47.28</td>
+                <td>65.05</td>
+              </tr>
+              <tr>
+                <td>LLAVA-34b | Flux</td>
+                <td>Integrated LVLM</td>
+                <td>54.23</td>
+                <td>71.32</td>
+                <td>47.28</td>
+                <td>62.73</td>
+              </tr>
+              <tr>
+                <td>Qwen-VL-70b | Openjourney</td>
+                <td>Integrated LVLM</td>
+                <td>52.73</td>
+                <td>71.63</td>
+                <td>55.63</td>
+                <td>64.05</td>
+              </tr>
+              <tr>
+                <td>Qwen-VL-70b | SD-3</td>
+                <td>Integrated LVLM</td>
+                <td>54.98</td>
+                <td>71.87</td>
+                <td>55.63</td>
+                <td>64.75</td>
+              </tr>
+              <tr>
+                <td>Qwen-VL-70b | SD-XL</td>
+                <td>Integrated LVLM</td>
+                <td>52.58</td>
+                <td>73.57</td>
+                <td>55.63</td>
+                <td>65.12</td>
+              </tr>
+              <tr>
+                <td>Qwen-VL-70b | Flux</td>
+                <td>Integrated LVLM</td>
+                <td>54.23</td>
+                <td>69.47</td>
+                <td>55.63</td>
+                <td>63.18</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
 </section>
-
-
 
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
@@ -805,11 +780,11 @@
       </p>
 
       <p>
-<b>Usage and License Notices</b>: The data and code is intended and licensed for research use only. They are also restricted to uses that follow the license agreement of CLIP,  LLaMA, Vicuna, GPT-4, LLaVA. The dataset is CC BY NC 4.0 (allowing only non-commercial use) and models trained using the dataset should not be used outside of research purposes.
-</p>
+<!-- <b>Usage and License Notices</b>: The data and code is intended and licensed for research use only. They are also restricted to uses that follow the license agreement of CLIP,  LLaMA, Vicuna, GPT-4, LLaVA. The dataset is CC BY NC 4.0 (allowing only non-commercial use) and models trained using the dataset should not be used outside of research purposes. -->
+<!-- </p>
 
       <p>
-      <a href='https://github.com/Computer-Vision-in-the-Wild/'><img id="painting_icon" width="10%" src="https://avatars.githubusercontent.com/u/97258247?s=200&v=4"></a> 
+      <a href='https://github.com/Computer-Vision-in-the-Wild/'><img id="painting_icon" width="10%" src="https://avatars.githubusercontent.com/u/97258247?s=200&v=4"></a>  -->
 <!--      Related Links: -->
 <!--      <a href='https://react-vl.github.io/'>[REACT]</a>  -->
 <!--      <a href='https://gligen.github.io/'>[GLIGEN]</a> -->

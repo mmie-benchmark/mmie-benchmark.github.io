@@ -277,7 +277,7 @@
                 automated metrics.
               </p>
               <div style="text-align: center;">
-                <img id="teaser" width="80%" src="images/overview.png">
+                <img id="teaser" width="80%" src="images/overview.jpeg">
               </div>
             </centering>
           </div>
@@ -349,13 +349,67 @@
             </style>
 
             <!-- HTML Code: Place this code in the document's body (between the 'body' tags) where the table should appear -->
+            <style>
+              table.overveiw-table {
+                border-collapse: collapse;
+                width: 100%;
+                font-family: Arial, sans-serif;
+              }
+            
+              table.overveiw-table thead {
+                background-color: #6b6c9b;
+                color: white;
+              }
+            
+              table.overveiw-table th,
+              table.overveiw-table td {
+                padding: 12px 15px;
+                text-align: center;
+                border: 1px solid #ddd;
+              }
+            
+              table.overveiw-table tbody tr:nth-child(even) {
+                background-color: #f2f2f2;
+              }
+            
+              table.overveiw-table tbody tr:hover {
+                background-color: #ddd;
+              }
+            
+              table.js-sort-table tbody tr:first-child td,
+              table.js-sort-table thead th,
+              table.js-sort-table tbody tr:last-child td {
+                border-top: none;
+                border-bottom: none;
+              }
+            
+              table.overveiw-table td:first-child {
+                text-align: left;
+              }
+            
+              table.overveiw-table tbody tr td[colspan='3'] {
+                background-color: #a7a7b7;
+                color: white;
+                text-align: left;
+                font-weight: bold;
+              }
+            
+              table.overveiw-table tbody tr td {
+                font-size: 14px;
+              }
+            
+              table.overveiw-table tbody tr td b {
+                font-weight: bold;
+              }
+            </style>
+            
             <div class="column is-six-fifths" width="80%">
-              <table class="js-sort-table">
+              <table class="overveiw-table">
                 <thead>
                   <tr>
-                    <th>Statistic</th>
-                    <th>Number</th>
-                    <th>Percentage</th>
+                    <th style="color: #ffffff;">Statistic</th>
+                    <th style="color: #ffffff;">Number</th>
+                    <th style="color: #ffffff;">Percentage</th>
                   </tr>
                 </thead>
                 <tbody>
